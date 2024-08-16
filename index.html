@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!--dekat tab bila buka website-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Kita Prototype 01</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>BERITA KITA<br> 
+<span style="font-family: 'Franklin Gothic Heavy', serif; font-size: 20px;line-height: 5;">Berita Untuk Semua</h1>
+        <nav>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#" id="home-link">Home</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Nasional</a>
+                   <!-- no submenu required <ul class="submenu">
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">Vision</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul> -->
+                </li>
+                <li class="menu-item">
+                    <a href="#">Ekonomi</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Sukan</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" id="contact-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home-section">
+            <h2>Home</h2>
+            <p>Salam Sejahtera,</p>
+                This is a news website prototype built to test my conceptual Web Accessibility Interaction Experienc (WAIX) Model. 
+                The models captured the interaction components that involve during the user interaction with a news website.
+            <!-- Inserting an Image -->
+             <img src="E:\my-website\images.png" alt="Description of the image" width="300" height="200">
+             <p></p>
+             <img src="E:\my-website\images.png" alt="Description of the image" width="300" height="200">
+             <img src="E:\my-website\images.png" alt="Description of the image" width="300" height="200">
+             <img src="E:\my-website\images.png" alt="Description of the image" width="300" height="200">
+
+
+
+        </section>
+        <section id="contact-info" class="hidden">
+            <h2>Contact Information</h2>
+            <p>Email: example@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 1234 Example Street, Example City, EX 12345</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Simple Website</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Website Loaded');
+            const homeLink = document.getElementById('home-link');
+            const contactLink = document.getElementById('contact-link');
+            const homeSection = document.getElementById('home-section');
+            const contactInfo = document.getElementById('contact-info');
+            
+            homeLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                homeSection.classList.remove('hidden');
+                contactInfo.classList.add('hidden');
+                homeSection.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            contactLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                homeSection.classList.add('hidden');
+                contactInfo.classList.remove('hidden');
+                
+                if (!contactInfo.classList.contains('hidden')) {
+                    contactInfo.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
