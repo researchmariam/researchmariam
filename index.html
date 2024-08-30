@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <!--dekat tab bila buka website-->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita Kita Prototype 01</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- news bar -->
+    <div class="news-bar">
+        <div class="news-barcontent">
+            <span class="news-item">Breaking: Major tech company announces new product launch...</span>
+            <span class="news-item">Latest update: Market hits new all-time high...</span>
+            <span class="news-item">Sports: Local team wins championship in a thrilling match...</span>
+        </div>
+    </div>
+    <!-- END news bar -->
+
     <header>
         <h1>BERITA KITA<br> 
-<span style="font-family: 'Franklin Gothic Heavy', serif; font-size: 20px;line-height: 5;">Berita Untuk Semua</h1>
+            <span style="font-family: 'Franklin Gothic Heavy', serif; font-size: 18px; line-height: 5;">Berita Untuk Semua</span>
+        </h1>
         <nav>
             <ul class="menu">
                 <li class="menu-item">
                     <a href="#" id="home-link">Home</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">Nasional</a>
-                   <!-- no submenu required <ul class="submenu">
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Mission</a></li>
-                        <li><a href="#">Vision</a></li>
-                        <li><a href="#">History</a></li>
-                    </ul> -->
+                    <a href="#" id="nasional-link">Nasional</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">Ekonomi</a>
+                    <a href="#" id="economy-link">Ekonomi</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">Sukan</a>
+                    <a href="#" id="sports-link">Sukan</a>
                 </li>
                 <li class="menu-item">
                     <a href="#" id="contact-link">Contact</a>
@@ -36,64 +41,226 @@
             </ul>
         </nav>
     </header>
+    
     <main>
-        <section id="home-section">
-            <h2>Home</h2>
-            <p>Salam Sejahtera,</p>
-                This is a news website prototype built to test my conceptual Web Accessibility Interaction Experienc (WAIX) Model. 
-                The models captured the interaction components that involve during the user interaction with a news website.
-            <!-- Inserting an Image -->
-             <img src="images.png" alt="Description of the image" width="300" height="200">
-                <p>Dear Reader,</p>
-            <p>My name is Mariam Azwa Yazid, PhD student from Faculty of Computer Science and Information Technology, Universiti Putra Malaysia, Serdang 
-                Currently, I am undertaking a study to explore the interaction experience among the visually impaired users navigating a website.
-                With your help it is expected that the more accessible website will be developed to help the visually impaired users. 
-                This website was developed as a prototype to test Web Accessibility Interaction Design Model [cite].</p>
-                <img src="images\WAIXmodel.jpg" alt="Description of the image" width="500" height="300"> 
-
-                <p>My name is Mariam Azwa Yazid, PhD student from Faculty of Computer Science and Information Technology, Universiti Putra Malaysia, Serdang 
-                    Currently, I am undertaking a study to explore the interaction experience among the visually impaired users navigating a website.
-                    With your help it is expected that the more accessible website will be developed to help the visually impaired users. 
-                    This website was developed as a prototype to test Web Accessibility Interaction Design Model [cite].</p>
-
-
-
-        </section>
-        <section id="contact-info" class="hidden">
-            <h2>Contact Information</h2>
-            <p>Email: example@example.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Address: 1234 Example Street, Example City, EX 12345</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Simple Website</p>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Website Loaded');
-            const homeLink = document.getElementById('home-link');
-            const contactLink = document.getElementById('contact-link');
-            const homeSection = document.getElementById('home-section');
-            const contactInfo = document.getElementById('contact-info');
+        <div class="content">
+            <!-- Start Home section -->
+	<section id="home-section">
+	<h2>Introduction</h2>
+	<p>Dear Reader,</p>
+	<p>My name is Mariam Azwa Yazid, and I am a PhD candidate at the Faculty of Computer Science and Information Technology, Universiti Putra Malaysia, Serdang. I am currently conducting a research study focused on enhancing the web navigation experience for visually impaired users. The goal of this research is to contribute to the development of more accessible websites that effectively meet the needs of individuals with disabilities, particularly those who are visually impaired.</p>
+	<p>This website was developed to test the Web Accessibility Interaction Experience (WAIX) Model which emphasizes the elements involved in the interaction process.</p>
+	<img src="images/WAIXmodel.jpg" alt="Description of the image" width="500" height="300">
+	<p>Kindly navigate this website and rate your experience by answering the survey.</p>
+                <a href="https://forms.gle/HtDSrK3KbwYkLb6eA" target="_blank">Click here to take the survey</a>
+	</section>
             
-            homeLink.addEventListener('click', function(event) {
-                event.preventDefault();
-                homeSection.classList.remove('hidden');
-                contactInfo.classList.add('hidden');
-                homeSection.scrollIntoView({ behavior: 'smooth' });
-            });
+<!-- Start NASIONAL section -->
+	<section id="nasional-section" class="hidden">
+		<!-- Content for Nasional section here -->
+		<!-- news 01-->
+		<article class="news-article">
+		<!-- Image on the left -->
+		<img src="images/Nasioanl_1.jpg" alt="Image description" />
+		<!-- News details on the right -->
+			<div>
+				<h2 class="news-title">
+				<a href="nasional_article_1.html">Kembara a penuh bendera keliling bandar raya</a>
+				</h2>
+					<div class="news-meta">
+						<span class="news-date">Ogos 28, 2024</span>
+						<span class="news-author">Oleh Samsul bin Kamal</span>
+					</div>
+					<div class="news-content">
+						<p>IPOH: Setiap kali menjelang Ogos, ratusan Jalur Gemilang dan bendera negeri Perak akan berkibar megah di sebuah unit rumah pangsa Taman Harmoni, di sini. Tidak hanya di luar rumah, pemilik kediaman itu, G Rajspari, 62, atau lebih mesra dipanggil Ratha, juga memasang bendera kebangsaan di dalam rumah dua bilik berkenaan bagi menyambut Hari Kebangsaan dan Hari Malaysia.</p>
+					</div>
+			</div>
+		</article>
+		<!-- news 02-->
+		<article class="news-article">
+		<!-- Image on the left -->
+		<img src="images/Nasioanl_2.jpg" alt="Image description" />
+		<!-- News details on the right -->
+			<div>
+				<h2 class="news-title">
+				<a href="index.html">Tanah jerlus: Kerajaan jangka kaji semula dasar perancangan bandar di KL</a>
+				</h2>
+					<div class="news-meta">
+						<span class="news-date">Ogos 28, 2024</span>
+						<span class="news-author">Nor Azizah Mokhtar </span>
+					</div>
+					<div class="news-content">
+					 <p>KUALA LUMPUR: Kerajaan dijangka mengkaji semula dasar perancangan bandar di ibu negara untuk mengurangkan risiko berlaku insiden tidak diingini seperti tanah jerlus di Jalan Masjid India pada Jumaat lalu.</p>
+					</div>
+			</div>	
+		</article>
+		<!-- news 03-->
+		<article class="news-article">
+		<!-- Image on the left -->
+		<img src="images/Nasioanl_3.jpg" alt="Image description" />
+		<!-- News details on the right -->
+			<div>
+				<h2 class="news-title">
+				<a href="">MMA cadang elaun tugas 'on call' doktor dinaikkan kepada RM25 sejam</a>
+				</h2>
+					<div class="news-meta">
+						<span class="news-date">Ogos 26, 2024</span>
+						<span class="news-author">Muhammad Yusri Muzamir </span>
+					</div>
+					<div class="news-content">
+					<p>KUALA LUMPUR: Semakan semula kadar elaun tugas atas panggilan atau 'on call', disifatkan penting bagi memastikan doktor diberi ganjaran adil untuk kerja keras dan pengorbanan petugas sistem penjagaan kesihatan awam itu.</p>
+					</div>
+			</div>
+		</article>
+	</section>
+<!-- Start Economy section -->
+	<section id="economy-section" class="hidden">
+	<!-- Content for Economy section here -->
+	<!-- Econews 01-->
+		<article class="news-article">
+		<!-- Image on the left -->
+		<img src="images/ekonomi_1.jpg" alt="Pemandangan Kuala Lumpur pesat membangun" />
+		<!-- News details on the right -->
+			<div>
+				<h2 class="news-title">
+				<a href="">Ekonomi Malaysia tunjuk daya tahan luar biasa separuh pertama 2024</a>
+				</h2>
+					<div class="news-meta">
+						<span class="news-date">Ogos 29, 2024</span>
+						<span class="news-author">Oleh Mahanum Abdul Aziz</span>
+					</div>
+					<div class="news-content">
+						<p>KUALA LUMPUR: Ekonomi Malaysia berpotensi berkembang melepasi julat sasaran kerajaan 4.0 peratus hingga 5.0 peratus bagi tahun ini, kata Presiden Persekutuan Pekilang-Pekilang Malaysia (FMM), Tan Sri Soh Thian Lai.</p>
+					</div>
+			</div>
+		</article>
+		<!-- Econews 02-->
+		<article class="news-article">
+		<!-- Image on the left -->
+		<img src="images/ekonomi_2.jpg" alt="Gobind (tiga dari kiri) mengadakan pertemuan dengan pengurusan kanan Eros Investments Group - Gambar ihsan Kementerian Digital" />
+		<!-- News details on the right -->
+			<div>
+				<h2 class="news-title">
+				<a href="">Firma India labur RM4.32 bilion bangun taman AI pertama Malaysia</a>
+				</h2>
+					<div class="news-meta">
+						<span class="news-date">Ogos 29, 2024</span>
+						<span class="news-author">Oleh Alzahrin Alias</span>
+					</div>
+					<div class="news-content">
+						<p>KUALA LUMPUR: Eros Investments Group, firma pelaburan India akan melabur AS$1 bilion (RM4.32 bilion) di Malaysia untuk membangunkan taman kecerdasan buatan (AI) dan studio filem AI yang pertama di negara ini.
+							Menteri Digital, Gobind Singh Deo berkata, hasrat Eros dan anak syarikatnya, Immerso AI-IP itu dijangka membabitkan pelaburan bernilai tinggi dengan potensi mewujudkan 5,000 peluang pekerjaan dalam tempoh lima tahun akan datang.
+						</p>
+					</div>
+			</div>
+		</article>
+	<!-- Econews 03-->
+		<article class="news-article">
+		<!-- Image on the left -->
+		<img src="images/ekonomi_3.jpg" alt="Wang kertas RM50" />
+		<!-- News details on the right -->
+			<div>
+				<h2 class="news-title">
+				<a href="">Ringgit kekal dalam aliran meningkat, cecah 4.308 berbanding dolar AS</a>
+				</h2>
+					<div class="news-meta">
+						<span class="news-date">Ogos 29, 2024</span>
+						<span class="news-author">Oleh BERNAMA </span>
+					</div>
+					<div class="news-content">
+						<p>KUALA LUMPUR: Ringgit mengekalkan trajektori meningkat berbanding dolar Amerika Syarikat (AS) pada Khamis, sejajar dengan kenaikan menyeluruh mata wang tempatan berbanding mata wang utama
+						lain termasuk euro.Pada pukul 6 petang, ringgit melonjak kepada 4.3080/3140 berbanding dolar AS, daripada 4.3425/3460 ketika ditutup semalam.
+						</p>
+					</div>
+			</div>
+		</article>
+	</section>
+	
+<!-- Start Sports section -->
+	<section id="sports-section" class="hidden">
+	<!-- Content for Sports section here -->
+	<!-- Sportsnews 01-->
+		<article class="news-article">
+		<!-- Image on the left -->
+		<img src="images/sukan_2.jpeg" alt="Azizulhasni sedang berbincang bersama Ketua jurulatih berbasikal trek, John Beasley"/>
+			<!-- News details on the right -->
+			<div>
+				<h2 class="news-title">
+				<a href="nasional_article_1.html">Azizulhasni mahu capai impian di Jepun</a>
+				</h2>
+					<div class="news-meta">
+						<span class="news-date">Ogos 17, 2024</span>
+						<span class="news-author">Oleh Meja Sukan</span>
+					</div>
+					<div class="news-content">
+						<p>PETALING JAYA: Ketua jurulatih berbasikal trek, John Beasley mengakui bahawa Datuk Azizulhasni Awang masih berkemampuan daripada segi mental dan fizikalnya untuk ke Sukan Olimpik Los Angeles (LA) 2028.
+						Bagaimanapun, jurulatih kelahiran Australia itu berharap agar semua pihak memberinya ruang memenuhi impiannya termasuk untuk menikmati perlumbaan keirin di Jepun.
+						</p>
+					</div>
+			</div>
+	</article>
 
-            contactLink.addEventListener('click', function(event) {
-                event.preventDefault();
-                homeSection.classList.add('hidden');
-                contactInfo.classList.remove('hidden');
-                
-                if (!contactInfo.classList.contains('hidden')) {
-                    contactInfo.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+	<!-- Sportsnews 02-->
+		<article class="news-article">
+		<!-- Image on the left -->
+		<img src="images/sukan_1.jpg" alt="Cristiano Ronaldo menyepak bola" />
+			<!-- News details on the right -->
+			<div>
+				<h2 class="news-title">
+				<a href="nasional_article_1.html">1,000 gol saya bersara-Cristiano Ronaldo</a>
+				</h2>
+					<div class="news-meta">
+						<span class="news-date">Ogos 29, 2024</span>
+						<span class="news-author">Oleh Meja Sukan</span>
+					</div>
+					<div class="news-content">
+						<p>LONDON: Cristiano Ronaldo memerlukan 101 gol untuk mencapai sasaran 1,000 gol sebelum bersara bagi meninggalkan legasi yang sukar digugat oleh pemain-pemain terbaik dunia lain.
+							Ketika ini, Ronaldo telah mengumpulkan 899 jaringan dalam kerjayanya untuk kelab dan negara dan merupakan penjaring terbanyak sepanjang zaman mengatasi seteru utamanya Lionel Messi di kedudukan kedua dengan mengumpul 838 gol setakat ini.</p>
+					</div>
+			</div>
+		</article>
+
+	<!-- Sportsnews 03-->
+		<article class="news-article">
+		<!-- Image on the left -->
+		<img src="images/sukan_3.jpg" alt="Pasukan Harimau Malaya di malam stadium"/>
+			<!-- News details on the right -->
+			<div>
+				<h2 class="news-title">
+				<a href="nasional_article_1.html">New Zealand asah taring Harimau Malaya</a>
+				</h2>
+					<div class="news-meta">
+						<span class="news-date">Ogos 30, 2024</span>
+						<span class="news-author">Oleh Hakimi Ismail</span>
+					</div>
+					<div class="news-content">
+						<p>PETALING JAYA: Persatuan Bola Sepak Malaysia (FAM) mengesahkan skuad Harimau Malaya bakal menentang negara ranking ke-94 dunia, New Zealand pada perlawanan persahabatan antarabangsa pada Oktober ini.
+							FAM dalam satu kenyataan memaklumkan, skuad kendalian Pau Marti akan berdepan All Whites pada perlawanan di Stadium North Harbour, Auckland pada Isnin, 14 Oktober nanti
+						</p>
+					</div>
+			</div>
+	</article>
+
+</section>
+
+<!-- Start Contact section -->
+            <section id="contact-section" class="hidden">
+                <h2>Contact Information</h2>
+                <p>Email: example@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: 1234 Example Street, Example City, EX 12345</p>
+            </section>
+        </div>
+		
+
+    </main>
+
+    <footer>
+        <p>&copy; Human-Computer Interaction Research Group
+		Fakulti Sains Komputer dan Teknologi Maklumat 
+		Universiti Putra Malaysia</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
