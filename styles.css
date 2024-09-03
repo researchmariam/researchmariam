@@ -25,8 +25,6 @@ h1 {
 
 }
 
-
-
 /* color for bar submenu*/
 nav {
     background-color: #444444;
@@ -183,16 +181,16 @@ p {
 /* full article */
 /* Add styles for the article page */
 .full-article {
-    margin: 20px auto;
+    margin: 10px auto;
     max-width: 800px;
     padding: 20px;
 }
 
 .full-article h1 {
     color: black; /* Your desired color */
-    font-size: 36px; /* Your desired font size */
-    font-family: 'Franklin Gothic Heavy', sans-serif; /* Ensure font family is applied */
-	line-height: 0.00;
+    font-family: 'Arial', sans-serif; /* Ensure font family is applied */
+    font-size: 30px;
+
 
 }
 .article-meta {
@@ -214,7 +212,6 @@ p {
 .article-content p {
     line-height: 1.6;
     margin-bottom: 10px;
-    text-align: justify;
 }
 
 /* End full article */
@@ -303,5 +300,10 @@ news-bar {
 
     .footer {
         font-size: 12px; /* Smaller font size for the footer */
+    }
+
+    .full-article h1 {
+        font-size: 20px; /* Further reduce font size for small screens */
+        
     }
 }
