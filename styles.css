@@ -25,7 +25,9 @@ h1 {
 
 }
 
-/* color untuk bar submenu*/
+
+
+/* color for bar submenu*/
 nav {
     background-color: #444444;
 }
@@ -142,9 +144,9 @@ p {
     .news-title {
        margin-top: 0; 
        font-size: 1em;
-        margin-bottom: 10px;
-        color: #1a1a1a; /* Example color */
-        background-color:white
+       margin-bottom: 10px;
+       color: #1a1a1a; /* Example color */
+       background-color:white
     
     }
     
@@ -186,6 +188,13 @@ p {
     padding: 20px;
 }
 
+.full-article h1 {
+    color: black; /* Your desired color */
+    font-size: 36px; /* Your desired font size */
+    font-family: 'Franklin Gothic Heavy', sans-serif; /* Ensure font family is applied */
+	line-height: 0.00;
+
+}
 .article-meta {
     font-size: 0.9em;
     color: #666;
@@ -237,3 +246,61 @@ news-bar {
     }
 }
 /* end news bar */
+
+/* to cater for small screen */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+    
+    h1 {
+        font-size: 40px; /* Reduce the header font size for small screens */
+        line-height: 1.2;
+    }
+
+    .menu {
+        flex-direction: column; /* Stack the menu items vertically */
+    }
+
+    .menu-item a {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Smaller font for better fit */
+    }
+
+    .news-article {
+        flex-direction: column; /* Stack image and content vertically */
+        align-items: center;
+        text-align: center; /* Center-align the content */
+    }
+
+    .news-article img {
+        margin-right: 0; /* Remove right margin for stacked layout */
+        margin-bottom: 15px; /* Add some space below the image */
+        width: 100%; /* Make the image take full width of the container */
+        max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    }
+
+    .news-title {
+        font-size: 1.2em;
+    }
+
+    .news-meta {
+        font-size: 0.8em;
+    }
+
+    .news-content {
+        font-size: 0.9em;
+    }
+
+    .full-article {
+        padding: 15px; /* Reduce padding for small screens */
+    }
+
+    .footer {
+        font-size: 12px; /* Smaller font size for the footer */
+    }
+}

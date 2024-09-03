@@ -1,25 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all menu links
     const menuLinks = document.querySelectorAll('.menu-item a');
     
-    // Add click event listener to each menu link
     menuLinks.forEach(link => {
         link.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
+            event.preventDefault();
             
-            // Get the section ID to show
             const sectionId = this.id.replace('-link', '-section');
             
-            // Hide all sections
             document.querySelectorAll('main section').forEach(section => {
                 section.classList.add('hidden');
             });
             
-            // Show the clicked section
-            document.getElementById(sectionId).classList.remove('hidden');
+            const section = document.getElementById(sectionId);
+            section.classList.remove('hidden');
+
+            // Scroll to the top of the entire page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
     
-    // By default, show the home section
-    document.getElementById('home-section').classList.remove('hidden');
+    // Check if there's a section ID in the URL hash
+    const hash = window.location.hash;
+    if (hash) {
+        document.querySelectorAll('main section').forEach(section => {
+            section.classList.add('hidden');
+        });
+        const section = document.querySelector(hash);
+        if (section) {
+            section.classList.remove('hidden');
+            // Scroll to the top of the entire page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    } else {
+        document.getElementById('home-section').classList.remove('hidden');
+    }
 });
