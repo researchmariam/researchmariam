@@ -212,6 +212,7 @@ p {
 .article-content p {
     line-height: 1.6;
     margin-bottom: 10px;
+    text-align: justify;
 }
 
 /* End full article */
