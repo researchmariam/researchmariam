@@ -85,7 +85,7 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
+    
     width: 100%;
     bottom: 0;
 	font-size: 14px;
@@ -219,7 +219,7 @@ p {
 
 /* news bar */
 news-bar {
-    position: fixed;
+    
     top: 0;
     left: 0;
     width: 100%;
@@ -256,6 +256,17 @@ news-bar {
         padding: 10px 0;
     }
     
+    main {
+        padding-bottom: 60px; /* Ensure content doesn’t overlap with the footer */
+    }
+
+    footer {
+        font-size: 12px; /* Smaller font size for the footer on small screens */
+        padding: 10px 0;
+        position: relative; /* Ensures footer doesn't overlap content */
+        bottom: 0; /* Keeps footer at the bottom */
+    }
+
     h1 {
         font-size: 40px; /* Reduce the header font size for small screens */
         line-height: 1.2;
@@ -268,12 +279,14 @@ news-bar {
     .menu-item a {
         padding: 10px 15px; /* Adjust padding for smaller screens */
         font-size: 14px; /* Smaller font for better fit */
+        line-height: 1.5;
     }
 
     .news-article {
         flex-direction: column; /* Stack image and content vertically */
         align-items: center;
         text-align: center; /* Center-align the content */
+        padding: 10px 15px;
     }
 
     .news-article img {
@@ -299,12 +312,10 @@ news-bar {
         padding: 15px; /* Reduce padding for small screens */
     }
 
-    .footer {
-        font-size: 12px; /* Smaller font size for the footer */
-    }
-
     .full-article h1 {
         font-size: 20px; /* Further reduce font size for small screens */
         
     }
+
 }
+
