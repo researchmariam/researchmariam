@@ -98,7 +98,7 @@ footer {
 #home-section {
     text-align: justify;
     padding: 20px; /* Optional: Adds some padding around the content */
-    width:100%;
+    width: 100%;
    
 }
 
@@ -257,7 +257,7 @@ news-bar {
         font-size: 12px; /* Smaller font for mobile screens */
 	 postion: fixed;
 	 top:0;
-	 width:100%;
+	 width: 100%;
 	 z-index:1000;
     }
     header {
