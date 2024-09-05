@@ -313,7 +313,7 @@ news-bar {
         font-size: 12px; /* Smaller font size for the footer */
 	    position: relative;
 	    width: 100%;
-	    botton:auto;
+	    bottom:auto;
     }
 
     .full-article h1 {
