@@ -5,6 +5,7 @@ body {
     background-color: white;
     display:block;
     min-height:100vh;
+	overflow-x: hidden; /* Prevent horizontal scrolling */
     overflow-y: auto; /* Allow the body to scroll if content overflows */
     margin-bottom: 50px;
     
@@ -252,6 +253,7 @@ news-bar {
         font-size: 14px;
 	    margin-top: 50px;
 	    padding-bottom:50px;
+	     overflow-x: hidden;/* Prevent horizontal scrolling on small screens */
     }
  .news-bar {
         font-size: 12px; /* Smaller font for mobile screens */
