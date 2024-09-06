@@ -250,13 +250,18 @@ news-bar {
 @media only screen and (max-width: 600px) {
     body {
         font-size: 14px;
-	    margin-top: 50px;
-	    padding-bottom:50px;
-	     overflow-x: hidden;/* Prevent horizontal scrolling on small screens */
+        padding-top: 50px;
+        padding-bottom: 50px;
+        overflow-x: hidden;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        position: relative;
+        box-sizing: border-box;
     }
  .news-bar {
-        font-size: 12px; /* Smaller font for mobile screens */
-	 postion: fixed;
+     font-size: 12px; /* Smaller font for mobile screens */
+	 position: fixed;
 	 top:0;
 	 width: 100%;
 	 z-index:1000;
