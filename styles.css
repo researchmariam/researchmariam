@@ -131,7 +131,6 @@ p {
     max-height: 400px; /* Ensures the image doesn't exceed this height */
     margin-right: 20px; /* Space between the image and the content */
     border-radius: 8px; /* Optional: Adds rounded corners */
-        
     }
     .news-article {
         display: flex; /* Enables flexbox layout */
@@ -308,16 +307,13 @@ news-bar {
     .full-article {
         padding: 15px; /* Reduce padding for small screens */
     }
-
-    .footer {
-        font-size: 12px; /* Smaller font size for the footer */
-	    position: relative;
-	    width: 100%;
-	    bottom:auto;
-    }
-
     .full-article h1 {
         font-size: 20px; /* Further reduce font size for small screens */
-        
+    }
+	footer {
+        font-size: 12px; /* Smaller font size for the footer */
+	    position: fixed;
+	    width: 100%;
+	    bottom:auto;
     }
 }
