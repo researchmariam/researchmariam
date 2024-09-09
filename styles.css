@@ -261,10 +261,16 @@ news-bar {
     }
  .news-bar {
      font-size: 12px; /* Smaller font for mobile screens */
-	 position: fixed;
-	 top:0;
-	 width: 100%;
-	 z-index:1000;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background-color: #333;
+     color: #fff;
+     padding: 10px 0;
+     overflow: hidden;
+     white-space: nowrap;
+     z-index: 1000; /* Ensures it stays on top of other content */
     }
     header {
         padding: 10px 0;
