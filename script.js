@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Check if there's a section ID in the URL hash
+    // Check if there's a section ID in the URL hash li
     const hash = window.location.hash;
     if (hash) {
         document.querySelectorAll('main section').forEach(section => {

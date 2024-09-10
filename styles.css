@@ -246,7 +246,7 @@ news-bar {
 }
 /* end news bar */
 
-/* to cater for small screen */
+/* to cater for small screen  te*/
 @media only screen and (max-width: 600px) {
     body {
         font-size: 14px;
