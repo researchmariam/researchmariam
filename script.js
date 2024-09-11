@@ -36,4 +36,16 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         document.getElementById('home-section').classList.remove('hidden');
     }
+     // Adjust text size
+     const textSize = document.getElementById('textSize');
+     textSize.addEventListener('change', function() {
+         document.body.style.fontSize = this.value + 'px';
+     });
+
+     // Toggle high contrast mode
+     const contrastToggle = document.getElementById('contrastToggle');
+     contrastToggle.addEventListener('click', function() {
+         document.body.classList.toggle('high-contrast');
+     });
+
 });

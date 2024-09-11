@@ -235,6 +235,15 @@ news-bar {
     display: inline-block;
     animation: scroll-left 20s linear infinite;
 }
+/*controls*/
+     /* High contrast mode */
+.high-contrast {
+     background-color: black;
+    color: white;
+    }
+.controls {
+        margin: 10px 0;
+    }
 
 @keyframes scroll-left {
     0% {
@@ -333,5 +342,15 @@ news-bar {
 	
     .full-article h1 {
         font-size: 20px; /* Further reduce font size for small screens */
+    }
+
+    /*controls*/
+     /* High contrast mode */
+     .high-contrast {
+        background-color: black;
+        color: white;
+    }
+    .controls {
+        margin: 10px 0;
     }
 }
