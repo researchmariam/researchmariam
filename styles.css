@@ -114,7 +114,50 @@ p {
 
 .content {
     flex: 1; /* Pushes the footer to the bottom */
+    filter: contrast(1);
 }
+/****************HIGH contrast****/
+.high-contrast {
+    background-color: black;
+    color: white;
+}
+
+.high-contrast header,
+.high-contrast footer,
+.high-contrast main,
+.high-contrast section,
+.high-contrast .full-article,
+.high-contrast .article-content,
+.high-contrast .news-article,
+.high-contrast .menu-item a {
+    background-color: black;
+    color: white;
+}
+
+/* Ensure images remain visible in high contrast mode */
+.high-contrast img {
+    filter: brightness(1.5); /* Make images more visible in high contrast */
+}
+
+/* Ensure links are visible */
+.high-contrast a {
+    color: #00f; /* Set a color that contrasts with the background */
+}
+
+/* Handle any specific text or elements */
+.high-contrast p, 
+.high-contrast h1, 
+.high-contrast h2, 
+.high-contrast h3, 
+.high-contrast span {
+    color: white;
+}
+
+/* Optional: Border contrast (if needed) */
+.high-contrast .news-article {
+    border-color: white;
+}
+
 
 /* news section */
     #news-details {
@@ -169,7 +212,7 @@ p {
     .news-content {
         flex: 1; /* Takes up the remaining space */
         font-size: 1em;
-        color: #333;
+        /*color: #333;*/
     }
     
     .news-content p {
@@ -187,15 +230,13 @@ p {
 }
 
 .full-article h1 {
-    color: black; /* Your desired color  testtesttest*/
+    /*color: black; /* Your desired color  testtesttest*/
     font-family: 'Arial', sans-serif; /* Ensure font family is applied */
     font-size: 30px;
-
-
 }
 .article-meta {
     font-size: 0.9em;
-    color: #666;
+    /*color: #666;*/
     margin-bottom: 20px;
 }
 
@@ -235,15 +276,7 @@ news-bar {
     display: inline-block;
     animation: scroll-left 20s linear infinite;
 }
-/*controls*/
-     /* High contrast mode */
-.high-contrast {
-     background-color: black;
-    color: white;
-    }
-.controls {
-        margin: 10px 0;
-    }
+
 
 @keyframes scroll-left {
     0% {
