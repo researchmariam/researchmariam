@@ -33,6 +33,8 @@
                 <li class="menu-item"><a href="index.html#economy-section">Kembali ke Ekonomi</a></li>
                 <li class="menu-item"><a href="index.html#sports-section">Sukan</a></li>
                 <li class="menu-item"><a href="index.html#contact-section">Contact</a></li>
+                
+                </li>
 		
             </ul>
         </nav>
@@ -69,6 +71,57 @@
 		
             </div>
         </article>
+        <!-- added for comments section -20252025
+        <section aria-labelledby="comments-title" style="margin-top: 40px;">
+            <h3 id="comments-title">Tinggalkan Komen Anda</h3>
+            <form id="commentForm">
+                <div>
+                    <label for="name">Nama:</label><br>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+                <div>
+                    <label for="comment">Komen:</label><br>
+                    <textarea id="comment" name="comment" rows="4" cols="50" required aria-required="true"></textarea>
+                </div>
+                <button type="submit">Hantar Komen</button>
+                <div id="commentResponse" aria-live="polite" style="margin-top:10px; color: green;"></div>
+                <button type="button" id="clearComments">Padam Semua Komen</button>
+            </form>
+        </section>
+        
+        <script>
+        
+  const form = document.getElementById('commentForm');
+  const response = document.getElementById('commentResponse');
+  const commentsList = document.createElement('div');
+  form.after(commentsList); // letak paparan komen selepas borang
+
+  // Papar komen sedia ada dari LocalStorage
+  function loadComments() {
+    const storedComments = JSON.parse(localStorage.getItem('comments')) || [];
+    commentsList.innerHTML = '<h4>Komen Sebelumnya:</h4>';
+    storedComments.forEach(({ name, comment }) => {
+      const commentItem = document.createElement('p');
+      commentItem.innerHTML = `<strong>${name}</strong>: ${comment}`;
+      commentsList.appendChild(commentItem);
+    });
+  }
+
+  // Simpan & paparkan komen baru
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = form.name.value.trim();
+    const comment = form.comment.value.trim();
+
+    if (name && comment) {
+      const newComment = { name, comment };
+      const storedComments = JSON.parse(localStorage.getItem('comments')) || [];
+      storedComments.push(newComment);
+      localStorage.setItem('comments', JSON.stringify(storedComments));
+
+      response.textContent = "Terima kasih! Komen anda telah diterima.";
+      form.reset();
+      loadComments(); // Papar semula semua komen
   
     </main>
 

@@ -105,3 +105,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 });
+//clear comments
+document.getElementById('clearComments').addEventListener('click', function () {
+    if (confirm("Adakah anda pasti mahu memadam semua komen?")) {
+      localStorage.removeItem('comments');
+      commentsList.innerHTML = "<p>Semua komen telah dipadam.</p>";
+    }
+  });
