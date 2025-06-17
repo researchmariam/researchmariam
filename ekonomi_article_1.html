@@ -122,6 +122,15 @@
       response.textContent = "Terima kasih! Komen anda telah diterima.";
       form.reset();
       loadComments(); // Papar semula semua komen
+    } else {
+      response.textContent = "Sila isi semua ruangan.";
+    }
+  });
+
+  // Muatkan komen bila halaman dibuka
+  loadComments();
+</script>
+       -->
   
     </main>
 
